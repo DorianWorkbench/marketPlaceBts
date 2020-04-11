@@ -1,0 +1,131 @@
+/* Contenu complet de la page */
+.container_all{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+.erreur{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 60rem;
+    height: 5rem;
+    margin-top: 2rem;
+    background-color: #CE0000;
+    border-radius: 1rem;
+    font-family: sans-serif;
+    color: #FFFFFF;
+}
+/* Container du formulaire d'inscription */
+.container_insc{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 60rem;
+    height: max-content;
+    background-color: #EAA543;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.title_insc{
+    font-size: 2rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    margin-top: 3rem;
+
+}
+/* Permet à l'input email de modifier son attribut margin */
+.form :nth-child(4){
+    margin-top: 1rem;
+}
+/* Permet de modifier tous les inputs de saisies de l'utilisateur */
+.form_ET{
+    width: 25rem;
+    height: 1.9rem;
+    border-radius: 0.3rem;
+    border-style: none;
+    outline-style: none;
+    padding-left: 1rem;
+    margin-top: 2rem;
+}
+/* Permet de redéfinir le style de la partie radio du formulaire */
+.sexeContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+    width: 15rem;
+    justify-content: space-between;
+    font-family: sans-serif;
+    color: #FFFFFF;
+}
+.btnSubscribe{
+    margin-top: 2rem;
+    border: none;
+    background-color: #FFFFFF;
+    font-weight: bold;
+    padding: 0.5rem;
+    width: 10rem;
+    color: #EAA543;
+    cursor: pointer;
+    outline-style: none;
+    border-radius: 0.3rem;
+}
+.btnSubscribe:hover{
+    background-color: #C07C1C;
+    color: #FFFFFF;
+    transition: 1000ms;
+}
+.fournisseur{
+    margin-top: 1rem;
+}
+.fournisseur a{
+    text-decoration: none;
+    color: white;
+    font-family: monospace;
+}
+.fournisseur a:hover{
+    text-decoration: none;
+    color: #306EAE;
+    font-family: monospace;
+    font-size: 1.3rem;
+    transition: 500ms;
+}
+.formFo{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    margin-top: 3rem;
+}
+.btnRetour{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    background-color: #FFFFFF;
+    font-weight: bold;
+    padding: 0.5rem;
+    width: 10rem;
+    color: #4396EA;
+    cursor: pointer;
+    outline-style: none;
+    border-radius: 0.3rem;
+}
+.btnRetour:hover{
+    background-color: #4396EA;
+    color: #FFFFFF;
+    transition: 1000ms;
+}
+

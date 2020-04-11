@@ -1,0 +1,75 @@
+.container_all{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+.erreur{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 60rem;
+    height: 5rem;
+    margin-top: 2rem;
+    background-color: #CE0000;
+    border-radius: 1rem;
+    font-family: sans-serif;
+    color: #FFFFFF;
+}
+.container_profil{
+    display: flex;
+    flex-direction: column;
+    width: 50rem;
+    height: max-content;
+    align-items: flex-start;
+    background-color: #265688;
+    border-radius: 0.6rem;
+}
+.title_user{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: larger;
+    padding: 1rem;
+    color: #FFFFFF;
+}
+.formPac{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.formPac label{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #FFFFFF;
+    margin-top: 1rem;
+
+}
+.form_Et{
+    width: 25rem;
+    height: 1.9rem;
+    border-radius: 0.3rem;
+    border-style: none;
+    outline-style: none;
+    padding-left: 1rem;
+    margin-top: 0.6rem;
+}
+.btnModif{
+    margin-top: 2rem;
+    border: none;
+    background-color: #FFFFFF;
+    font-weight: bold;
+    padding: 0.5rem;
+    width: 10rem;
+    color: #4396EA;
+    cursor: pointer;
+    outline-style: none;
+    border-radius: 0.3rem;
+}
+.btnModif:hover{
+    background-color: #4396EA;
+    color: #FFFFFF;
+    transition: 1000ms;
+}
