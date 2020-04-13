@@ -7,6 +7,3 @@ function erreur() {
         },1500)
     });
 }
-function modifValue(valeur, id){
-    document.getElementById(id).value=valeur;
-}

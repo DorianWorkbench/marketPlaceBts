@@ -1,0 +1,28 @@
+.container_all{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+.containerArt{
+    display: flex;
+    flex-direction: column;
+    width: 70rem;
+    margin-top: 4rem;
+}
+table{
+    border-collapse: collapse;
+    align-items: center;
+}
+td,th{
+    border: 1px solid black;
+    padding: 2rem;
+    font-family: sans-serif;
+}
+.article{
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    color: #265688;
+}
