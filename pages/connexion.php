@@ -17,19 +17,18 @@
 <body>
     <?php include('../static/header.php')?>
     
-    <div class="container_all">
     <div class="erreur" id="erreur">
             <span>Erreur lors de la saisie de vos identifiants</span>
     </div>
-        <div class="connexion">
-            <span class="title_co"> Connecte toi : </span>
-            <form action="connexion.php" method="post" class="form_co">
-                <input type="text" name="username" id="username" placeholder="Username" class="form_Et">
-                <input type="password" name="password" id="password" placeholder="Password" class="form_Et">
+    
+    <div class="connexion">
+        <span class="title_co"> Connecte-toi : </span>
+        <form action="connexion.php" method="post" class="form_co">
+            <input type="text" name="username" id="username" placeholder="Username" class="form_Et">
+            <input type="password" name="password" id="password" placeholder="Password" class="form_Et">
 
-                <button type="submit" class="btnConnexion" name="btnConnexion"> Connexion </button>
-            </form>
-        </div>
+            <button type="submit" class="btnConnexion" name="btnConnexion"> Connexion </button>
+        </form>
     </div>
     <script type="text/javascript" src="../javascript/script.js"></script>
 </body>

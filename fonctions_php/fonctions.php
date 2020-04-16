@@ -42,7 +42,7 @@
         $array = array();
         $rep;
         
-        $querySelect = "SELECT nomArticle, prix, stock, cat
+        $querySelect = "SELECT nArticle, nomArticle, prix, stock, cat
                         FROM article";
         
         $rep = $c->prepare($querySelect);
@@ -50,6 +50,37 @@
         $rep = $rep-> fetchAll(PDO::FETCH_ASSOC);
         
         $array =$rep;
+
+        return $array;
+    }
+    function recupArticle($nArticle){
+        include('co.php');
+        $array = array();
+        $rep;
+
+        $querySelectArticle = "SELECT * FROM article WHERE nArticle = $nArticle";
+        $rep = $c->prepare($querySelectArticle);
+        $rep->execute();
+        $array = $rep->fetchAll(PDO::FETCH_ASSOC);
+
+        return $array;
+    }
+    function rechercheFournisseur($nArticle){
+        include('co.php');
+        
+        $array = array();
+        $rep;
+
+        $querySelectorFournisseur = "SELECT raisonSociale 
+                                     FROM utilisateur 
+                                     FULL JOIN article 
+                                     ON article.idUtilisateur=utilisateur.idUtilisateur
+                                     WHERE nArticle = $nArticle";
+        
+        $rep = $c->prepare($querySelectorFournisseur);
+        $rep->execute();
+        $rep = $rep->fetchAll(PDO::FETCH_ASSOC);
+        $array = $rep;
 
         return $array;
     }

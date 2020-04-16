@@ -1,28 +1,80 @@
-.container_all{
+.containerTrend{
     display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+    flex-direction: row;
+    margin-top: 3rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    height: fit-content;
+    padding: 2rem;
+    padding-top: 3rem;
 }
-.containerArt{
+.containerArticle{
     display: flex;
     flex-direction: column;
-    width: 70rem;
-    margin-top: 4rem;
-}
-table{
-    border-collapse: collapse;
+    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
-}
-td,th{
-    border: 1px solid black;
-    padding: 2rem;
+    background-color: #4396EA;
+    color: white;
     font-family: sans-serif;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    height: 13.75rem;
+    width: 10.6rem;
+}
+.nomArticle{
+    padding: 1rem;
+    word-wrap: break-word;
+    width: 6.5rem;
+    text-align: center;
+}
+.prixArticle{
+    padding: 1rem;
+}
+.acheter{
+    padding-top: 1.5rem;
+}
+.btnAcheter{
+    cursor: pointer;
+    background-color: #FFFFFF;
+    border: none;
+    padding:0.5rem;
+    color: #4396EA;
+    border-radius: 0.5rem;
+    outline-style: none;
+
+}
+.btnAcheter:hover{
+    background-color: #265688;
+    color: white;
+    transition: 600ms;
+}
+.title{
+    margin-top: 2rem;
+    margin-left: 1rem;
+    font-family: sans-serif;
+    color: #CE6D39;
 }
 .article{
     font-family: sans-serif;
     font-weight: 600;
     font-size: 2rem;
+    color: #FFFFFF;
+}
+.trends{
+    display: inline-block;
+    font-family: sans-serif;
+    margin-top: 2rem;
+    margin-left: 1rem;
     color: #265688;
+}
+@media screen and(max-width:500px){
+    
 }

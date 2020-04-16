@@ -2,39 +2,105 @@
     padding: 0;
     margin: 0;
 }
-
 body{
     display: flex;
     flex-direction: column;
-    height : 100vh;
+    height: 100vh;
+    background-color: #FFEEE4;
 }
-
-.container_nav{
-    background-color: #4396EA;
+.containerNav{
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    min-width: fit-content;
+    background-color: #4396EA;
 }
-.container_nav span{
-    font-family: Arial, Helvetica, sans-serif;
-    margin : 1rem;
-    cursor: pointer;
-    font-weight: bold;
-    color: white;
-}
-.container_nav ul{
+.containerLi{
     display: flex;
+    flex-direction: row;
+    margin-right: 1.5rem;
+}
+li{
+    margin-left: 1rem;
+    list-style-type: none;
+    font-size: 0.8rem;
+    font-family: sans-serif;
+}
+li:nth-child(1){
+    margin-left: 0;
+}
+ul{
     list-style: none;
 }
-.container_nav ul li{
-    margin-left: 0.8rem;
-}
-.container_nav ul li:last-child{
-    margin-right: 0.8rem;
-}
-.container_nav ul li a{
-    color: #FFFFFF;
-    text-decoration: none;
+li a{
+    margin-left: 0rem;
+    list-style-type: none;
+    font-size: medium;
     font-family: sans-serif;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+li:nth-child(3){
+    margin-left: 1rem;
+}
+
+.titleHeader{
+    margin-left: 1.5rem;
+    font-size: larger;
+    font-family: sans-serif;
+    cursor: pointer;
+    color: white;
+}
+.deco{
+    border-style: none;
+    padding: 0.4rem;
+    font-weight: 600;
+    font-size: 0.8rem;
+    height: 2rem;
+    color: rgb(9, 84, 158);
+    background-color:white ;
+    cursor: pointer;
+}
+.deco:hover{
+    background-color: rgb(9, 84, 158);
+    color:  white;
+    transition: 1000ms;
+    font-weight: 600;
+}
+@media screen and (max-width:500px){
+    .titleHeader{
+        display: none;
+    }
+    .containerNav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 5rem;
+    }
+    .containerLi{
+        display: flex;
+        flex-direction: row;
+        margin-right: 1.5rem;
+        align-items: center;
+        justify-content: center;
+    }
+    li{
+        margin-left: 1rem;
+        list-style-type: none;
+        font-size: 0.8rem;
+        font-family: sans-serif;
+    }
+    li:nth-child(1){
+        margin-left: 0;
+    }
+    .titleHeader{
+        margin-left: 1.5rem;
+        font-size: larger;
+        font-family: sans-serif;
+        margin-right: 1rem;
+    }   
 }

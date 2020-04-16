@@ -6,6 +6,12 @@ include('fonctions_php/fonctions.php');
 if(!isset($_SESSION['idUtilisateur'])){
   session_destroy();
 }
+if(isset($_POST['deco'])){
+  session_destroy();
+  $delay=0;
+  $url="http://localhost/marketplace_pro/index.php";
+  header("Refresh: $delay, url=$url");
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -17,36 +23,38 @@ if(!isset($_SESSION['idUtilisateur'])){
     <link rel="stylesheet" href="css/indexHome.css">
 </head>
 <body>
-    <?php include('static/header.php');?>
-    <div class="container_all">
+  <?php include('static/header.php');?>
+  <div class="container_all">
+  <h1 class="trends">Tendances</h1>
+    <div class="containerArt">
+      <div class="containerTrend">
       
-      <div class="containerArt">
         <?php
-                $array = tableauAllArticles();
-                if(!(empty($array[0]['nomArticle']))){
-                  echo "<table>";
-                  echo "<tr>";
-                  echo "<th>Article</th>";
-                  echo "<th>Catégorie</th>";
-                  echo "<th>Prix</th>";
-                  echo "<th>Quantité</th>";
-                  echo "<th>acheter</th>";
-                  echo "</tr>";
-                  echo "<form action=\"pages/detailArticle.php\" method=\"post\">";
-                for($i=0; $i<sizeof($array); $i++){
-                  echo "<tr>";  ²
-                  echo "<td align=\"center\">".$array[$i]['nomArticle']."</td>";
-                  echo "<input type=\"hidden\" name=\"nomArticle\" value=\"".$array[$i]['nomArticle']."\">";
-                  echo "<td align=\"center\">".$array[$i]['cat']."</td>";
-                  echo "<td align=\"center\">".$array[$i]['prix']." €</td>";
-                  echo "<td align=\"center\">".$array[$i]['stock']."</td>";
-                  echo "<td align=\"center\"><button type=\"submit\" class=\"btnAcheter\" name=\"Acheter\">Acheter</button></td>";
-                }
-                echo "</form>";
-                echo "</table>";
-              }else{
-                echo "<span class=\"article\">Il n'y a aucun article en boutique</span>";
-              }
+          $array = tableauAllArticles();
+          if(sizeof($array)==0){
+            echo "<span class=\"article\">Pas d'article</span>";
+          }
+          else{
+            for($i=0; $i< sizeof($array); $i++){
+              echo "<form action=\"pages/detailArticle.php\" method=\"post\">";
+              echo "<input type=\"hidden\" name=\"nArticle\" value=".$array[0]['nArticle'].">";
+                echo "<div class=\"containerArticle\">";
+                  echo "<div class=\"nomArticle\">";
+                    echo ucfirst(strtolower($array[$i]['nomArticle'])); 
+                  echo "</div>";
+                  echo "<div class=\"prixArticle\">";
+                    echo $array[$i]['prix']." €";
+                  echo "</div>";
+                  echo "<div class=\"qteArticle\">";
+                    echo $array[$i]['stock']. " pièces";
+                  echo "</div>";
+                  echo "<div class=\"acheter\">";
+                    echo "<button class=\"btnAcheter\" type=\"submit\" name=\"acheter\">Acheter</button>";
+                  echo "</div>";
+                echo "</div>";
+              echo "</form>";
+            }
+          }
         ?>
       </div>
     </div>

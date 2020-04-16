@@ -1,72 +1,13 @@
-.container_all{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    
-}
 .erreur{
-    display: none;
-    justify-content: center;
-    align-items: center;
-    width: 60rem;
-    height: 5rem;
-    margin-top: 6rem;
-    background-color: #CE0000;
-    border-radius: 1rem;
-    font-family: sans-serif;
-    color: #FFFFFF;
+    display: block;
 }
 .connexion{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 60rem;
-    height: max-content;
-    background-color: #4396EA;
-    border-radius: 1rem;
-    padding: 1rem;
-}
-.title_co{
-    font-size: 2rem;
-    font-family: sans-serif;
-    font-weight: bold;
-    color: #FFFFFF;
-}
-.form_co{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
+    margin-top: 25%;
+    margin-right: 25%;
+    margin-left: 25%;
+    background-color: rosybrown;
+    justify-content: center;
     align-items: center;
-    margin-top: 2rem;
-}
-.form_Et{
-    width: 25rem;
-    height: 1.9rem;
-    border-radius: 0.3rem;
-    border-style: none;
-    outline-style: none;
-    padding-left: 1rem;
-    margin-top: 2rem;
-}
-.btnConnexion{
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    border: none;
-    background-color: #FFFFFF;
-    font-weight: bold;
-    padding: 0.5rem;
-    width: 10rem;
-    color: #4396EA;
-    cursor: pointer;
-    outline-style: none;
-    border-radius: 0.3rem;
-}
-.btnConnexion:hover{
-    background-color: #265688;
-    color: #FFFFFF;
-    transition: 1000ms;
 }
