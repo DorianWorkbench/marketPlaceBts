@@ -17,7 +17,6 @@
 <body>
     <?php include('../static/header.php')?>
 
-    <div class="container_all">
         <div class="erreur" id="erreur">
             <span>Erreur lors de la saisie des champs</span>
         </div>
@@ -33,11 +32,11 @@
                 <div class="sexeContainer">
                     <div class="Masculin">
                         <input type="radio" name="sexe" id="Masculin" value="M">
-                        <label for="Masculin">Masculin</label>
+                        <label for="Masculin">M</label>
                     </div>
                     <div class="Feminin">
                         <input type="radio" name="sexe" id="Feminin" value="F">
-                        <label for="Feminin">Feminin</label>
+                        <label for="Feminin">F</label>
                     </div>
                 </div>
 
@@ -49,12 +48,10 @@
                 
                 <button type="submit" class="btnSubscribe" name="btnSubscribe" value="btnSubscribe"> S'inscrire </button>
                 
-                <span class="fournisseur"><a href="inscriptionFo.php"> Vous êtes fournisseur ?</a></span>
+                <a href="inscriptionFo.php" class="fournisseur"> Vous êtes fournisseur ?</a>
 
             </form>
         </div>
-
-    </div>
     <script type = "text/javascript" src = "../javascript/script.js"></script>
 </body>
 </html>

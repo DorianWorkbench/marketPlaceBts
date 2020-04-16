@@ -1,75 +1,70 @@
-.container_all{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-}
 .erreur{
     display: none;
-    justify-content: center;
-    align-items: center;
-    width: 60rem;
-    height: 5rem;
-    margin-top: 2rem;
-    background-color: #CE0000;
-    border-radius: 1rem;
-    font-family: sans-serif;
-    color: #FFFFFF;
 }
 .container_profil{
     display: flex;
     flex-direction: column;
-    width: 50rem;
-    height: max-content;
-    align-items: flex-start;
-    background-color: #265688;
-    border-radius: 0.6rem;
+    background-color: royalblue;
+    justify-content: center;
+    margin: auto;
+    width: 90%;
+    max-width: 50rem;
+    min-width: 10rem;
+    border-radius: 1rem;
+    font-family: sans-serif;
+    color: white;
 }
 .title_user{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 600;
-    font-size: larger;
     padding: 1rem;
-    color: #FFFFFF;
+    padding-bottom: 2rem;
+    font-size: larger;
 }
 .formPac{
     display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 100%;
     align-items: center;
-    margin-bottom: 2rem;
+    padding: 0 3rem;
 }
 .formPac label{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #FFFFFF;
     margin-top: 1rem;
-
+    margin-bottom: 1rem;
+}
+.formPac label:nth-child(1){
+    margin-top: 0rem;
+    margin-bottom: 1rem;
 }
 .form_Et{
-    width: 25rem;
-    height: 1.9rem;
-    border-radius: 0.3rem;
-    border-style: none;
+    width: 100%;
+    max-width: 30rem;
+    padding: 0.7rem;
+    border-radius: 1rem;
     outline-style: none;
-    padding-left: 1rem;
-    margin-top: 0.6rem;
+    border-style: none;
 }
 .btnModif{
+    margin: 1rem 0;
     margin-top: 2rem;
-    border: none;
-    background-color: #FFFFFF;
-    font-weight: bold;
+    width: 100%;
+    max-width: 10rem;
     padding: 0.5rem;
-    width: 10rem;
-    color: #4396EA;
-    cursor: pointer;
+    border-style: none;
     outline-style: none;
-    border-radius: 0.3rem;
+    background-color: white;
+    border-radius: 1rem;
+    font-weight: 600;
+    color: royalblue;
+    cursor: pointer;
 }
 .btnModif:hover{
-    background-color: #4396EA;
-    color: #FFFFFF;
-    transition: 1000ms;
+    background-color: #3A5196;
+    color: white;
+    transition: 600ms;
+}
+@media screen and (max-width: 447){
+    .container_profil{
+        width: 30%;
+    } 
+    .formPac{
+        padding: 0 1rem;
+    }
 }

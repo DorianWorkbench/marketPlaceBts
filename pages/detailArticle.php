@@ -39,27 +39,25 @@
 </head>
 <body>
     <?php include('../static/header.php'); ?>
-    <div class="container_all">
-        <div class="containerArticle">
-            <span class="nomArticle"><?php echo "".ucfirst($nomArticle)." du fournisseur ".strtoupper($fournisseur).":";?></span>
-            <div class="containerDetails">
-                <span class="descriptionTitle">Description : </span>
-                <span class="description"><?php echo $description; ?></span>
-                <div class="containerInfos">
-                    <div class="infos">
-                        <span class="prixC">
-                            <span class="prixTitle">Prix : </span>
-                            <span style= "color:white; font-family: sans-serif;"><?php echo $prix." €"; ?></span>
-                        </span>
-                        <span class="qteC">
-                            <span class="qteTitle">Stock : </span>
-                            <span style="color:white; font-family: sans-serif;"><?php echo $qte."/u" ?></span>
-                        </span>
+
+        <div class="container_infos">
+        <span class="titleArticle"><?php echo $nomArticle." du fournisseur ".$fournisseur ?></span>
+
+            <div class="detail">
+                <span class="inti" id="descTitle">Description : </span>
+                <span class="desc"><?php echo $description ?></span>
+                <div class="infoArt">
+                    <div class="prix">
+                        <span class="inti">Prix</span>
+                        <span><?php echo $prix ?></span>
+                    </div>
+                    <div class="qte">
+                        <span class="inti">Stock</span>
+                        <span><?php echo $qte ?></span>
                     </div>
                 </div>
+                <button type="submit" name="acheter" class="acheter">Acheter</button>
             </div>
-            <button class="btnAcheterProduit">Acheter</button>
         </div>
-    </div>
 </body>
 </html>

@@ -34,6 +34,7 @@
 
 <?php
     include('../fonctions_php/co.php');
+    
     if(isset($_POST['btnConnexion'])){
         if($_POST['username']==null || $_POST['password']==null){
             echo "<script>erreur()</script>";

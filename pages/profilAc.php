@@ -25,13 +25,12 @@
 <body>
     <?php include('../static/header.php');?>
     
-    <div class="container_all">
     <span class="erreur">
         Vous n'avez pas remplis les deux champs pour changer de mot de passe.
     </span>
         <div class="container_profil">
             <span class="title_user">Bienvenue <?php echo ucfirst(strtolower($_SESSION['prenom']))." :"?></span>
-            
+
             <form action="profilAc.php" method="post" class="formPac">
                 <label for="OldPassword">Ancien mot de passe : </label>
                 <input type="password" name="OldPassword" id="OldPassword" placeholder="Ancien mot de passe" class="form_Et">
@@ -43,9 +42,7 @@
                 <input type="text" name="email" id="email" placeholder="email" value = "<?php echo $_SESSION['email']?>"class="form_Et">
                 <button type="submit" name="btnModif" class="btnModif">Modifier</button>
             </form>
-
         </div>
-    </div>
     <script type="text/javascript" src="../javascript/script.js"></script>
 </body>
 </html>

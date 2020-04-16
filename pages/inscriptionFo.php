@@ -17,7 +17,6 @@
 <body>
     <?php include('../static/header.php')?>
     
-    <div class="container_all">
     <div class="erreur" id="erreur">
             <span>Erreur lors de la saisie des champs</span>
         </div>
@@ -34,7 +33,6 @@
                 <button type="submit" class="btnRetour" name="retour">Retour</buton>
             </form>
         </div>
-    </div>
     <script type = "text/javascript" src = "../javascript/script.js"></script>
 </body>
 </html>
