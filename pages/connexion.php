@@ -17,9 +17,7 @@
 <body>
     <?php include('../static/header.php')?>
     
-    <div class="erreur" id="erreur">
-            <span>Erreur lors de la saisie de vos identifiants</span>
-    </div>
+    <span class="erreur">Erreur lors de la saisie de vos identifiants</span>
     
     <div class="connexion">
         <span class="title_co"> Connecte-toi : </span>

@@ -21,6 +21,10 @@ body{
     display: flex;
     flex-direction: row;
     margin-right: 1.5rem;
+    align-items: center;
+}
+.containerLi form{
+    margin-left: 1rem;
 }
 li{
     margin-left: 1rem;
@@ -77,30 +81,13 @@ li:nth-child(3){
     .containerNav{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        height: 5rem;
-    }
-    .containerLi{
-        display: flex;
-        flex-direction: row;
-        margin-right: 1.5rem;
-        align-items: center;
         justify-content: center;
     }
-    li{
-        margin-left: 1rem;
-        list-style-type: none;
-        font-size: 0.8rem;
-        font-family: sans-serif;
+    .containerLi{
+        width: 100%;
+        margin: 0;
+        justify-content: space-around;
+        align-items: center;
     }
-    li:nth-child(1){
-        margin-left: 0;
-    }
-    .titleHeader{
-        margin-left: 1.5rem;
-        font-size: larger;
-        font-family: sans-serif;
-        margin-right: 1rem;
-    }   
+   
 }

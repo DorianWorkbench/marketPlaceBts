@@ -37,7 +37,7 @@ if(isset($_POST['deco'])){
           else{
             for($i=0; $i< sizeof($array); $i++){
               echo "<form action=\"pages/detailArticle.php\" method=\"post\">";
-              echo "<input type=\"hidden\" name=\"nArticle\" value=".$array[0]['nArticle'].">";
+              echo "<input type=\"hidden\" name=\"nArticle\" value=".$array[$i]['nArticle'].">";
                 echo "<div class=\"containerArticle\">";
                   echo "<div class=\"nomArticle\">";
                     echo ucfirst(strtolower($array[$i]['nomArticle'])); 
