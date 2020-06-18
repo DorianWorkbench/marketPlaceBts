@@ -25,7 +25,7 @@ if(isset($_POST['deco'])){
 <body>
   <?php include('static/header.php');?>
   <div class="container_all">
-  <h1 class="trends">Tendances</h1>
+  <h1 class="trends">Articles :</h1>
     <div class="containerArt">
       <div class="containerTrend">
       
@@ -49,7 +49,10 @@ if(isset($_POST['deco'])){
                     echo $array[$i]['stock']. " pièces";
                   echo "</div>";
                   echo "<div class=\"acheter\">";
+                  if(!isset($_SESSION['idUtilisateur'])){
+                  }else{
                     echo "<button class=\"btnAcheter\" type=\"submit\" name=\"acheter\">Acheter</button>";
+                  }
                   echo "</div>";
                 echo "</div>";
               echo "</form>";

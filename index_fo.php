@@ -21,36 +21,25 @@ if(!isset($_SESSION['idUtilisateur'])){
 </head>
 <body>
     <?php include('static/header.php')?>
-    <div class="container_all">
-      <div class="containerArt">
-        <?php
-            $array = tableauArticles($_SESSION['raisonSociale']);
-            if(!(empty($array[0]['nomArticle']))){
-            echo "<table>";
-            echo "<tr>";
-            echo "<th>Article</th>";
-            echo "<th>Catégorie</th>";
-            echo "<th>Raison sociale</th>";
-            echo "<th>Prix</th>";
-            echo "<th>Quantité</th>";
-            echo "<th>Modifier</th>";
-            echo "</tr>";
-
-            for($i=0; $i<sizeof($array); $i++){
-              echo "<tr>";
-              echo "<td align=\"center\">".$array[$i]['nomArticle']."</td>";
-              echo "<td align=\"center\">".$array[$i]['cat']."</td>";
-              echo "<td align=\"center\">".$array[$i]['raisonSociale']."</td>";
-              echo "<td align=\"center\">".$array[$i]['prix']." €</td>";
-              echo "<td align=\"center\">".$array[$i]['stock']."</td>";
-              echo "<td align=\"center\"><button type=\"submit\" class=\"btnModif\">Modifier</button></td>";
-            }
-            echo "</table>";
-          }else{
-            echo "<span class=\"article\">Vous n'avez ajouté aucun article</span>";
-          }
-          ?>
-      </div>
+    
+    <div class="containerArticleFo">
+      <?php $array = tableauArticles($_SESSION['raisonSociale']);
+      if(!empty($array[0]['nArticle'])){
+        for($i=0; $i<sizeof($array); $i++){?>
+          <form action="pages/modifArticle.php" method="post" class="articleFo">
+            <input type="hidden" name="nArticle" value="<?php echo $array[$i]['nArticle']; ?>">
+            <span class="nomArticle"><?php echo ucfirst(strtolower($array[$i]['nomArticle'])); ?></span>
+            <div class="infos">
+              <span class="prix">Prix : <?php echo $array[$i]['prix'] ?></span>
+              <span class="qte"> Stock : <?php echo $array[$i]['stock']?></span>
+            </div>
+            <button type="submit" name="btnModif" class="btnModif">Modifier</button>
+          </form>
+      <?php }
+      }else{
+        echo "Vous n'avez ajouté aucun article";
+       } 
+      ?>
     </div>
     
 </body>

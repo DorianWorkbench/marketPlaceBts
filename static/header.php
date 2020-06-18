@@ -21,7 +21,7 @@
                         echo '<li><a href = "/marketplace_pro/pages/profilAc.php">'.$_SESSION['prenom'].'</a></li>';
                     }
                 }else{
-                    echo '<li><a href = "/marketplace_pro/pages/connexion.php">connexion</a></li>';
+                    echo '<li><a href = "/marketplace_pro/pages/connexion.php">Connexion</a></li>';
                 }
             ?>
             <?php

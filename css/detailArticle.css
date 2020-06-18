@@ -58,9 +58,15 @@
     border-style: none;
     cursor: pointer;
     margin: 0 auto;
-    margin-top: 2rem;
     background-color: white;
     font-weight: 600;
     color: #02989D;
+}
+.center{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0, auto;
+    padding-top: 2rem;
 }
 

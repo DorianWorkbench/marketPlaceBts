@@ -3,8 +3,8 @@
     include('../fonctions_php/fonctions.php');
     session_start();
     if(isset($_POST['acheter']) && !empty($_POST['nArticle'])){
-        $_SESSION['nArticle'] = $_POST['nArticle'];
 
+        $_SESSION['nArticle'] = $_POST['nArticle'];
         header('detailArticle.php');
 
         $arrayArticle = recupArticle($_SESSION['nArticle']);
@@ -56,8 +56,17 @@
                         <span><?php echo $qte ?></span>
                     </div>
                 </div>
-                <button type="submit" name="acheter" class="acheter">Acheter</button>
+                <form action="detailArticle.php" method="post" class="center">
+                    <button type="submit" name="achat" class="acheter">Acheter</button>
+                </form>
             </div>
         </div>
 </body>
 </html>
+
+<?php 
+    if(isset($_POST['achat'])){
+        ajoutCommande($_SESSION['nArticle'],$_SESSION['idUtilisateur']);
+        header('Location:../index.php');
+    }
+?>

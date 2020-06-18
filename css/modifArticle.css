@@ -1,0 +1,83 @@
+.containerModifArticle{
+    display: flex;
+    flex-direction: column;
+    background-color: powderblue;
+    width: 80%;
+    max-width: 70rem;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 1rem;
+    align-items: center;
+    font-family: sans-serif;
+}
+.titleModif{
+    font-weight: 600;
+    font-size: large;
+}
+.formModifArticle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 40rem;
+}
+.lblArt{
+    width: 100%;
+    text-align: center;
+    margin: 1rem 0;
+    font-weight: 600;
+    color: royalblue;
+}
+.form_Et{
+    width: 90%;
+    max-width: 50rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border-style: none;
+    outline-style: none;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.infosArticle{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.number_Et{
+    width: 30%;
+    border-style: none;
+    padding: 0.3rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.btnModif{
+    width: 80%;
+    max-width: 10rem;
+    margin-top: 2rem;
+    padding: 0.5rem;
+    border-style: none;
+    background-color: white;
+    outline-style: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: powderblue;
+}
+.btnModif:hover{
+    background-color: royalblue;
+    color: white;
+    transition: 600ms;
+}
+#desc{
+    max-width: 80%;
+    width: 40rem;
+    max-height: fit-content;
+    outline-style: none;
+    border-style: none;
+    padding: 1rem;
+    border-radius: 1rem;
+}

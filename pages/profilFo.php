@@ -24,7 +24,6 @@
 </head>
 <body>
     <?php include('../static/header.php')?>
-    <div class="container_all">
         <div class="profilFo">
             <span class="title">Bienvenue <?php echo ucfirst(strtolower($_SESSION['raisonSociale']));?></span>
             
@@ -44,7 +43,6 @@
                 <button type="submit" name="btnModif" class="btnModif">Modifier</button>
             </form>
         </div>
-    </div>
 </body>
 </html>
 

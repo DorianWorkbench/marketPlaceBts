@@ -1,62 +1,62 @@
-.container_all{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-}
 .profilFo{
     display: flex;
     flex-direction: column;
-    width: 50rem;
-    height: max-content;
-    align-items: flex-start;
-    background-color: #EAA543;
-    border-radius: 0.6rem;
-}
-.title{
+    margin: auto;
+    width: 90%;
+    max-width: 60rem;
+    min-width: 0rem;
+    padding: 1rem 0;
+    border-radius: 1rem;
+    background-color: royalblue;
     font-family: sans-serif;
     color: white;
-    font-size: larger;
-    font-weight: 600;
-    padding: 1rem;
 }
 .formPfo{
     display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 100%;
-    align-items: center;
-    margin-bottom: 2rem;
+    margin: 1rem 10%;
 }
-.form_Et{
-    width: 25rem;
-    height: 1.9rem;
-    border-radius: 0.3rem;
-    border-style: none;
-    outline-style: none;
-    padding-left: 1rem;
-    margin-top: 0.6rem;
+.title{
+    margin-left: 1rem;
+    font-weight: 600;
+    font-size: large;
+    margin-bottom: 1rem;
 }
 .lblP{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #FFFFFF;
-    margin-top: 1rem;
+    padding: 1rem 0;
+    text-align: center;
+}
+.lblP:nth-child(1){
+    padding-top: 0;
+}
+.form_Et{
+    padding:0.7rem;
+    border-radius: 1rem;
+    border-style: none;
+    outline-style: none;
+}
+#raisonSociale{
+    margin-bottom: 2rem;
 }
 .btnModif{
-    margin-top: 2rem;
-    border: none;
-    background-color: #FFFFFF;
-    font-weight: bold;
-    padding: 0.5rem;
-    width: 10rem;
-    color: #4396EA;
+    padding:0.5rem;
+    width: 100%;
+    max-width: 10rem;
+    margin: 0 auto;
+    border-radius: 1rem;
+    background-color: white;
+    border-style: none;
     cursor: pointer;
-    outline-style: none;
-    border-radius: 0.3rem;
+    color: royalblue;
+    font-weight: 600;
 }
 .btnModif:hover{
-    background-color: #265688;
-    color: #FFFFFF;
-    transition: 1000ms;
+    background-color: #3A5196;
+    color: white;
+    transition: 600ms;
+}
+@media screen and (max-width:447px){
+    .profilFo{
+        margin: 10% auto;
+    }
 }

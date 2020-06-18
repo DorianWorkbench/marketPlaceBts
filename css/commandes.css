@@ -1,0 +1,52 @@
+.Commande{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+    max-width: 60rem;
+    min-width: 10rem;
+    height: 100%;
+    max-height: fit-content;
+    background-color: rgb(201, 135, 13);
+    border-radius: 1rem;
+    font-family: sans-serif;
+    color: white;
+    padding: 1rem;
+}
+.title_commande{
+    padding: 1rem;
+}
+.detail_commande{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 90%;
+    background-color: grey;
+    cursor: default;
+}
+.row_com{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+.bt_suppr{
+    width: 90%;
+    max-width: 10rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    outline-style: none;
+    border-style: none;
+    cursor: pointer;
+    background-color: white;
+    font-weight: 600;
+    color: #02989D;
+}
+
+.bt_suppr:hover{
+    color: white;
+    background-color: #02989D;
+    transition: 800ms;
+}
