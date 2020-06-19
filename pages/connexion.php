@@ -1,7 +1,10 @@
 <?php
+    //Début de la session
     session_start();
+    //Si il existe une variable de session ayant pour valeur un idUtilisateur on déconnecte l'utilisateur et on le redirige vers la page d'accueil
     if(isset($_SESSION['idUtilisateur'])){
         session_destroy();
+        //Redirection vers la page "index.php"
         header('Location: ../index.php');
     }
 ?>
@@ -33,26 +36,35 @@
 </html>
 
 <?php
+    //Ajout des fonction php
     include('../fonctions_php/co.php');
     
+    //Ecoute du bouton btnConnexion
     if(isset($_POST['btnConnexion'])){
+        //Si les champs ne sont pas remplis, nous affichons une erreur
         if($_POST['username']==null || $_POST['password']==null){
-            echo "<script>erreur()</script>";
-        }else{
+            echo "Les champs ne sont pas remplis";
+        }else{//Si les champs sont remplis, nous effectuons une verification de l'existance de l'utilisateur
+            //Récupération des champs saisis par l'utilisateur
             $username=$_POST['username'];
             $password=$_POST['password'];
 
+            //Définition de la requête permettant de récuperer les données de l'utilisateur
             $querry = "SELECT * FROM utilisateur WHERE username = '$username' AND password = '$password'";
+            //Préparation de la requête 
             $result = $c->prepare($querry);
+            //Execution de la requête
             $result->execute();
+            //Retour de la réponse à la requête sous forme de tableau
             $result = $result->fetchAll();
 
+            //Si le tableau contient une valeur
             if(sizeof($result)==1){
+                //Si l'élément du tableau a pour valeur pour le champ "type" "FO"
                 if($result[0]['type']=="FO"){
-                    //Integer nUtilisateur, String username, String password, String email, String postalAddress, String rib, String raisonSociale
-                    
+                //Nous démarrons une session avec pour valeur les champs récupérés par la requête                    
                     session_start();
-                    
+                    //Définition des variables de session et attribution des valeurs
                     $_SESSION['idUtilisateur']=$result[0]['idUtilisateur'];
                     $_SESSION['username']=$result[0]['username'];
                     $_SESSION['password']=$result[0]['password'];
@@ -62,11 +74,11 @@
                     $_SESSION['raisonSociale']=$result[0]['raisonSociale'];
                     $_SESSION['type']=$result[0]['type'];
                     header('Location: ../index_fo.php');
-                //String username, String password, String email, String postalAddress, String rib,String surname, String name, Integer sexe, String paiement, Integer nUtilisateur
-                }else if($result[0]['type']=="AC"){
-
+                }else if($result[0]['type']=="AC"){//Si l'élément du tableau a pour valeur pour le champ "type" "AC"
+                    //Nous démarrons une session avec pour valeur les champs récupérés par la requête
                     session_start();
-
+                    
+                    //Définition des variables de session et attribution des valeurs
                     $_SESSION['idUtilisateur']=$result[0]['idUtilisateur'];
                     $_SESSION['username']=$result[0]['username'];
                     $_SESSION['password']=$result[0]['password'];
@@ -79,8 +91,8 @@
                     $_SESSION['paiement']=$result[0]['paiement'];
                     header('Location: ../index.php'); 
                 }
-            }else{
-                echo "<script>erreur();</script>";
+            }else{//Si la taille du tableau n'est pas égale à un (nous sous entendrons donc que l'utilisateur n'existe pas).
+                echo "L'utilisateur n'existe pas";
             }
         }
     }

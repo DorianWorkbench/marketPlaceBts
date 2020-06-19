@@ -2,20 +2,20 @@
     display: none;
 }
 .connexion{
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   max-width: 70rem;
-   min-width: 10rem;
-   min-height: 20rem;
-   margin-left: 15%;
-   margin-right: 15%;
-   padding-top: 2rem;
-   border-radius: 1rem;
-   margin-top: auto;
-   margin-bottom: auto;
-   background-color: #4396EA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+    max-width: 60rem;
+    min-width: 10rem;
+    height: 100%;
+    max-height: fit-content;
+    background-color: #4396EA;
+    border-radius: 1rem;
+    font-family: sans-serif;
+    color: white;
+    padding: 1rem;
 }
 .title_co{
     color: white;

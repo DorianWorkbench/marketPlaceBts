@@ -2,9 +2,10 @@
 //Démarrage de la session me permettant d'effectué un test sur les variables de celle-ci
 session_start();
 include('fonctions_php/fonctions.php');
-//Test pour savoir si l'utilisateur est connecté, si non, ferme la session
-if(!isset($_SESSION['idUtilisateur'])){
-  session_destroy();
+
+//Vérifie si l'utilisateur est du bon type et si un utilisateur est connecté
+if($_SESSION['type']=='FO'){
+  header('Location: index_fo.php');
 }
 if(isset($_POST['deco'])){
   session_destroy();

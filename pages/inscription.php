@@ -1,7 +1,11 @@
 <?php
+    //Démarrage de la session
     session_start();
+    //Nous vérifions si un utilisateur n'est pas déjà connecté
     if(isset($_SESSION['idUtilisateur'])){
+        //Si un utilisateur est connecté, nous le déconnectons
         session_destroy();
+        //Et nous le renvoyons vers la page d'index
         header('Location: ../index.php');
     }
 ?>
@@ -56,18 +60,20 @@
 </body>
 </html>
 <?php
+    //Récupération des fonctions du fichier "co.php"
     include('../fonctions_php/co.php');
+    //Ecoute du bouton "btnSubscribe"
     if(isset($_POST['btnSubscribe'])){
-
+        //Vérification de la valeur des champs
         if($_POST['username']==null || $_POST['password']==null || 
            !isset($_POST['sexe']) || $_POST['email']==null || 
            $_POST['nom']==null || $_POST['prenom']==null || 
            $_POST['rib']==null || $_POST['adresse']==null){
-
+            //Affichage d'une erreur lors de la non saisie des champs
             echo "<script>erreur();</script>";
 
         }else{
-
+            //Si tous les champs sont remplis correctement nous attribuons les valeurs aux variables
             $username = $_POST['username'];
             $password = $_POST['password'];
             $email = $_POST['email'];
@@ -79,23 +85,24 @@
             $prenom = $_POST['prenom'];
             $rib = $_POST['rib'];
 
-           //Création de la requête de test pour savoir si l'utilisateur existe.
-
+            //Création de la requête de test pour savoir si l'utilisateur existe.
             $verif = "SELECT username FROM utilisateur WHERE username = '$username'";
+            //Préparation de la requête
             $req = $c -> prepare($verif);
+            //Execution de la requête
             $req->execute();
+            //Recupération des username dans un tableau "rep"
             $rep = $req->fetchAll();
 
             //Si le tableau de la requête précédente est supérieur à 0, cela voudra dire que l'utilisateur existe déjà.
             if(sizeof($rep)==0){
-
                 //Création de la requête de création de l'utilisateur.
                 $query = "INSERT INTO utilisateur(username, password, email, adresse, type, paiement, sexe, nom, prenom, rib)
                 VALUES('$username', '$password', '$email', '$adresse', '$type', '$paiement', '$sexe', '$nom', '$prenom', '$rib')";
                //Execution de la requête d'inscription.
                $c->exec($query);
                header('Location: ../index.php'); 
-            }else{
+            }else{//Si la taille du tableau de réponse est supérieur à 0 cela signifie que l'utilisateur existe déjà
                 echo "L'utilisateur existe déjà";
             }
         }

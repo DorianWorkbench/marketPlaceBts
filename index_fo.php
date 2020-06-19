@@ -5,9 +5,9 @@ session_start();
 include('fonctions_php/co.php');
 include('fonctions_php/fonctions.php');
 
-//Test pour savoir si l'utilisateur est connecté, si non, ferme la session
-if(!isset($_SESSION['idUtilisateur'])){
-  session_destroy();
+//Vérifie si l'utilisateur est du bon type et si un utilisateur est connecté
+if($_SESSION['type']=='AC'|| empty($_SESSION['type'])){
+  header('Location: index.php');
 }
 ?>
 <!DOCTYPE html>
