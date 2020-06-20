@@ -64,6 +64,7 @@
     include('../fonctions_php/co.php');
     //Ecoute du bouton "btnSubscribe"
     if(isset($_POST['btnSubscribe'])){
+
         //Vérification de la valeur des champs
         if($_POST['username']==null || $_POST['password']==null || 
            !isset($_POST['sexe']) || $_POST['email']==null || 

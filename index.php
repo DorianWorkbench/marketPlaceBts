@@ -3,9 +3,11 @@
 session_start();
 include('fonctions_php/fonctions.php');
 
-//Vérifie si l'utilisateur est du bon type et si un utilisateur est connecté
-if($_SESSION['type']=='FO'){
-  header('Location: index_fo.php');
+//Vérifie si l'utilisateur est du bon type
+if(isset($_SESSION['type'])){
+  if($_SESSION['type']=='FO'){
+    header('Location: index_fo.php');
+  }
 }
 if(isset($_POST['deco'])){
   session_destroy();

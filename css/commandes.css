@@ -1,18 +1,20 @@
 .Commande{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    margin: auto 10rem;
+    /* margin-top: 3rem;
+    margin-left: 6rem;
+    margin-right: 6rem; */
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    margin: auto;
-    width: 90%;
-    max-width: 60rem;
-    min-width: 10rem;
-    height: 100%;
-    max-height: fit-content;
     background-color: rgb(201, 135, 13);
-    border-radius: 1rem;
     font-family: sans-serif;
     color: white;
-    padding: 1rem;
+    border-radius: 1rem;
+    height: fit-content;
+    padding: 2rem;
+    padding-top: 1rem;
 }
 .title_commande{
     padding: 1rem;
@@ -44,9 +46,17 @@
     font-weight: 600;
     color: #02989D;
 }
-
 .bt_suppr:hover{
     color: white;
     background-color: #02989D;
     transition: 800ms;
+}
+@media screen and (max-width:829px){
+    .Commande{
+        margin: 2rem 1rem;
+    }
+    .row_com{
+        display: flex;
+        flex-direction: column;
+    }
 }

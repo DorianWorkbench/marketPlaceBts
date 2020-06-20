@@ -12,7 +12,7 @@
         $exist = $c->prepare($queryArticle);
         //Exécution de la requête
         $exist->execute();
-        //Attributiond des valeurs dans un tableau
+        //Attribution des valeurs dans un tableau
         $exist = $exist->fetchAll();
         //Si le tableau est vide, l'article n'existe pas donc nous renvoyons false
         if(sizeof($exist)==0){
@@ -113,8 +113,8 @@
             //Ajout de la ligne commande
             $queryAddArticle="INSERT INTO Commande VALUES($idUtil, $nArticle)";
             $c->exec($queryAddArticle);
-            //Update du stock dans la table "article" lorsque le stock est supérieur à 0
-            $queryModifArt="UPDATE article SET stock=stock-1 where stock>0";
+            //Update du stock dans la table "article" lorsque le stock est supérieur à 0 et nArticle = nArticle
+            $queryModifArt="UPDATE article SET stock=stock-1 WHERE stock>0 AND nArticle=$nArticle";
             $c->exec($queryModifArt);
             echo('Requête executé avec succes');
         }else{//Sinon le stock est insufisant

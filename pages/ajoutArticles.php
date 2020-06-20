@@ -103,7 +103,7 @@
                     header('Location: ../index_fo.php');
                 }
             }else{//Si articleExiste return true
-                echo "L'article existe déjà";
+                echo "<script>alert(\"L'article existe déjà\")</script>";
             }
                 
         }else{//Si le nom de l'article n'est pas saisie

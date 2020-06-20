@@ -41,8 +41,8 @@
 
             <span class=\"row_com\">
                 <span class=\"nomArticle_com\" name=\"nomArticle_com\">".$arrayL[$i]->getNomArticle()."</span>
-                <span class=\"prixArticle_com\">".$arrayL[$i]->getPrixArticle()."</span>
-                <span class=\"quantite_com\">1</span>
+                <span class=\"prixArticle_com\">".$arrayL[$i]->getPrixArticle()." €"."</span>
+                <span class=\"quantite_com\">1 article</span>
                 <button class=\"bt_suppr\" name=\"bt_suppr\">Annuler</button>
             </span>
         </form>";
