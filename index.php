@@ -46,7 +46,7 @@ if(isset($_POST['deco'])){
                     echo ucfirst(strtolower($array[$i]['nomArticle'])); 
                   echo "</div>";
                   echo "<div class=\"prixArticle\">";
-                    echo $array[$i]['prix']." €";
+                    echo strval(number_format((float)$array[$i]['prix'],1))." €";
                   echo "</div>";
                   echo "<div class=\"qteArticle\">";
                     echo $array[$i]['stock']. " pièces";

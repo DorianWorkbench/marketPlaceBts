@@ -30,7 +30,7 @@
         $array = array();
         $rep;
         //Permet d'afficher les infos des articles suivant la raison social quand l'article existe(!='')
-        $querySelect = "SELECT nArticle, nomArticle, prix, stock, cat, raisonSociale 
+        $querySelect = "SELECT nArticle, nomArticle, round(prix, 1) AS prix, stock, cat, raisonSociale 
                         FROM article 
                         FULL JOIN utilisateur 
                         ON article.idUtilisateur = utilisateur.idUtilisateur

@@ -17,7 +17,7 @@
         //Appel de la fonction "recupArticle" pour récuperer les différentes valeurs du tableau renvoyé
         $description = recupArticle($_SESSION['nArticle'])[0]['description'];
         $qte = recupArticle($_SESSION['nArticle'])[0]['stock'];
-        $prix = recupArticle($_SESSION['nArticle'])[0]['prix'];
+        $prix = number_format((float)recupArticle($_SESSION['nArticle'])[0]['prix'],1);
     }
     //Vérifie si la variable de session "nArticle" est attribuée, cela règle le problème d'affichage des données lors du rechargement de la page
     if(!isset($_POST['acheter']) && !empty($_SESSION['nArticle'])){
@@ -30,7 +30,7 @@
         $fournisseur = rechercheFournisseur($_SESSION['nArticle'])[0]['raisonSociale'];
         $description = recupArticle($_SESSION['nArticle'])[0]['description'];
         $qte = recupArticle($_SESSION['nArticle'])[0]['stock'];
-        $prix = recupArticle($_SESSION['nArticle'])[0]['prix'];
+        $prix = number_format((float)recupArticle($_SESSION['nArticle'])[0]['prix'],1);
     }
     //Evite l'accès à la page par un url rempli à la main par l'utilisateur lorsque celui ci n'a pas consulté d'article au préalable
     if(!isset($_POST['acheter']) && empty($_SESSION['nArticle'])){

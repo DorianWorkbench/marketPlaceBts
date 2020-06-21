@@ -25,12 +25,14 @@ if($_SESSION['type']=='AC'|| empty($_SESSION['type'])){
     <div class="containerArticleFo">
       <?php $array = tableauArticles($_SESSION['raisonSociale']);
       if(!empty($array[0]['nArticle'])){
-        for($i=0; $i<sizeof($array); $i++){?>
+        for($i=0; $i<sizeof($array); $i++){
+          $prix=number_format((float)$array[$i]['prix'],1);
+          ?>
           <form action="pages/modifArticle.php" method="post" class="articleFo">
             <input type="hidden" name="nArticle" value="<?php echo $array[$i]['nArticle']; ?>">
             <span class="nomArticle"><?php echo ucfirst(strtolower($array[$i]['nomArticle'])); ?></span>
             <div class="infos">
-              <span class="prix">Prix : <?php echo $array[$i]['prix'] ?></span>
+              <span class="prix">Prix : <?php echo $prix ?></span>
               <span class="qte"> Stock : <?php echo $array[$i]['stock']?></span>
             </div>
             <button type="submit" name="btnModif" class="btnModif">Modifier</button>

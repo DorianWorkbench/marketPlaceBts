@@ -12,7 +12,7 @@ if(isset($_POST['btnModif']) && !empty($_POST['nArticle'])){
     //Définition et attribution des valeurs aux variables
     $arrayArticle = recupArticle($_SESSION['nArticle']);
     $nomArticle = $arrayArticle[0]['nomArticle'];
-    $prixArticle = $arrayArticle[0]['prix'];
+    $prixArticle = number_format((float)$arrayArticle[0]['prix'],1);
     $stock = $arrayArticle[0]['stock'];
     $desc = $arrayArticle[0]['description'];
 }
@@ -23,7 +23,7 @@ if(!isset($_POST['btnModif']) && !empty($_SESSION['nArticle'])){
     $arrayArticle = recupArticle($_SESSION['nArticle']);
     //Declaration des variables et attribution des valeurs
     $nomArticle = $arrayArticle[0]['nomArticle'];
-    $prixArticle = $arrayArticle[0]['prix'];
+    $prixArticle = number_format((float)$arrayArticle[0]['prix'],1);
     $stock = $arrayArticle[0]['stock'];
     $desc = $arrayArticle[0]['description'];
 }
@@ -56,7 +56,7 @@ if($_SESSION['type']=='AC'|| empty($_SESSION['type'])){
             <div class="infosArticle">
                 <div class="prix">
                     <label for="prix" style="color:royalblue; font-weight:600;"> Prix Article : </label>
-                    <input type="number" name="prixArticle" id="prixArticle" value="<?php echo $prixArticle ?>" class="number_Et">
+                    <input type="number" step="0.1" name="prixArticle" id="prixArticle" value="<?php echo $prixArticle ?>" class="number_Et">
                 </div>
                 <div class="qte">
                     <label for="qte" style="color:royalblue; font-weight:600;">Stock : </label>
